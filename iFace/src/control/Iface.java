@@ -23,8 +23,6 @@ public class Iface {
 
     public void cadastrar() {
 
-        boolean usuarioValido = false;
-
         String novoUsuario;
         String novaSenha;
 
@@ -38,7 +36,13 @@ public class Iface {
             novaSenha = Input.lerStringTamanhoFixo(MAX_CARACTERES);
         } while(!confirmarSenha(novaSenha));
 
+        this.listaContas.add(new Conta(novoUsuario, novaSenha));
+        Console.cadastroRealizado();
+    }
 
+    private void criarPerfil() {
+
+        //TODO
     }
 
     public void entrar() {
@@ -55,8 +59,13 @@ public class Iface {
         for(Conta atual : this.listaContas) {
             if(atual.validarUsuario(usuario)) {
                 if(atual.validarSenha(senha)) {
+                    Console.logado();
                     this.contaConectada = atual;
-                    menuPrincipal();
+                    if(this.contaConectada.perfilCriado()) {
+                        // TODO menuPrincipal();
+                    } else {
+                        // TODO criarPerfil();
+                    }
                     return;
                 }
                 break;

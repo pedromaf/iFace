@@ -37,4 +37,9 @@ public class Conta {
 
         return (this.senha.equals(senha));
     }
+
+    public boolean perfilCriado() {
+
+        return (this.perfil != null);
+    }
 }
