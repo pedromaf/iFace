@@ -1,5 +1,6 @@
 package control;
 
+import model.geral.DadosPessoais;
 import view.*;
 import model.Conta;
 import model.Perfil;
@@ -42,7 +43,25 @@ public class Iface {
 
     private void criarPerfil() {
 
-        //TODO
+        String nome;
+        int idade;
+        String email;
+
+        Console.solicitarNome();
+        nome = Input.lerString();
+
+        Console.solicitarIdade();
+        idade = Input.lerInt();
+
+        Console.solicitarEmail();
+        email = Input.lerString();
+
+        DadosPessoais dadosPessoais = new DadosPessoais(nome,idade,email);
+
+        Perfil novoPerfil = new Perfil(dadosPessoais);
+        this.contaConectada.associarPerfil(novoPerfil);
+        listaPerfis.add(novoPerfil);
+
     }
 
     public void entrar() {
@@ -62,9 +81,11 @@ public class Iface {
                     Console.logado();
                     this.contaConectada = atual;
                     if(this.contaConectada.perfilCriado()) {
-                        // TODO menuPrincipal();
+                        menuPrincipal();
                     } else {
-                        // TODO criarPerfil();
+                        Console.criarPerfil();
+                        criarPerfil();
+                        menuPrincipal();
                     }
                     return;
                 }
@@ -77,10 +98,35 @@ public class Iface {
     public void menuPrincipal() {
 
         if(this.contaConectada != null) {
+
+            Perfil perfil = this.contaConectada.getPerfil();
             boolean sair = false;
+            int opcao;
 
             do {
+                Console.menuPrincipal(perfil.getNumeroSolicitacoes());
+                opcao = Input.validarOpcao(1,6);
 
+                switch(opcao) {
+                    case 1:
+                        //TODO menuPerfil(perfil);
+                        break;
+                    case 2:
+                        //TODO adicionarAmigo(perfil);
+                        break;
+                    case 3:
+                        //TODO enviarMensagem(perfil);
+                        break;
+                    case 4:
+                        //TODO menuComunidade(perfil);
+                        break;
+                    case 5:
+                        //TODO solicitacoesDeAmizade(perfil);
+                        break;
+                    case 6:
+                    default:
+                        sair = true;
+                }
             } while (!sair);
 
         }

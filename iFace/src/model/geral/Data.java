@@ -26,6 +26,6 @@ public class Data {
 
     public String toString() {
 
-        return this.dia + "/" + this.mes + "/" + this.ano + " " + this.hora + ":" + this.minuto + ":" + this.segundo + ".";
+        return this.dia + "/" + this.mes + "/" + this.ano + " " + this.hora + ":" + this.minuto + ":" + this.segundo;
     }
 }

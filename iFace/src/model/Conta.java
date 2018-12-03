@@ -23,6 +23,7 @@ public class Conta {
 
         if(this.perfil == null && perfil != null) {
             this.perfil = perfil;
+            this.perfil.setIdConta(this.id);
         } else {
             Erro.erroAoAssociarPerfil();
         }
@@ -41,5 +42,10 @@ public class Conta {
     public boolean perfilCriado() {
 
         return (this.perfil != null);
+    }
+
+    public Perfil getPerfil() {
+
+        return this.perfil;
     }
 }
