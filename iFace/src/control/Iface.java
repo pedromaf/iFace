@@ -1,6 +1,7 @@
 package control;
 
 import model.geral.DadosPessoais;
+import model.geral.SolicitacaoDeAmizade;
 import view.*;
 import model.Conta;
 import model.Perfil;
@@ -22,6 +23,7 @@ public class Iface {
         this.listaPerfis = new ArrayList<>();
     }
 
+    //CADASTRO
     public void cadastrar() {
 
         String novoUsuario;
@@ -39,6 +41,28 @@ public class Iface {
 
         this.listaContas.add(new Conta(novoUsuario, novaSenha));
         Console.cadastroRealizado();
+    }
+
+    private boolean usuarioExiste(String usuario) {
+
+        for(Conta atual: listaContas) {
+            if(atual.validarUsuario(usuario)) {
+                Erro.usuarioJaExiste();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean confirmarSenha(String novaSenha) {
+
+        Console.confirmeSenha();
+        if(novaSenha.equals(Input.lerStringTamanhoFixo(MAX_CARACTERES))) {
+            return true;
+        } else {
+            Erro.senhaNaoConfirmada();
+            return false;
+        }
     }
 
     private void criarPerfil() {
@@ -61,9 +85,11 @@ public class Iface {
         Perfil novoPerfil = new Perfil(dadosPessoais);
         this.contaConectada.associarPerfil(novoPerfil);
         listaPerfis.add(novoPerfil);
-
+        Console.perfilCriado();
     }
 
+
+    //PRINCIPAL
     public void entrar() {
 
         String usuario;
@@ -95,7 +121,7 @@ public class Iface {
         Erro.loginInvalido();
     }
 
-    public void menuPrincipal() {
+    private void menuPrincipal() {
 
         if(this.contaConectada != null) {
 
@@ -104,49 +130,159 @@ public class Iface {
             int opcao;
 
             do {
-                Console.menuPrincipal(perfil.getNumeroSolicitacoes());
+                Console.menuPrincipal(perfil.getNumeroSolicitacoes(), perfil.getNumeroMensagens());
                 opcao = Input.validarOpcao(1,6);
 
                 switch(opcao) {
                     case 1:
-                        //TODO menuPerfil(perfil);
+                        menuPerfil(perfil);
                         break;
                     case 2:
-                        //TODO adicionarAmigo(perfil);
+                        enviarSolicitacaoDeAmizade();
                         break;
                     case 3:
-                        //TODO enviarMensagem(perfil);
+                        //TODO menuMensagens(perfil);
                         break;
                     case 4:
                         //TODO menuComunidade(perfil);
                         break;
                     case 5:
-                        //TODO solicitacoesDeAmizade(perfil);
+                        solicitacoesDeAmizade(perfil);
                         break;
                     case 6:
                     default:
                         sair = true;
                 }
-            } while (!sair);
+            } while(!sair);
 
+            this.contaConectada = null;
         }
 
     }
 
-    private boolean usuarioExiste(String usuario) {
+    private void menuPerfil(Perfil perfil) {
 
-        for(Conta atual: listaContas) {
-            if(atual.validarUsuario(usuario)) {
-                Erro.usuarioJaExiste();
-                return true;
+        int opcao;
+        boolean voltar = false;
+
+        do {
+            Console.mostrar("\n\t\t[Perfil]\n\n");
+            perfil.mostrarPerfil();
+            Console.menuPerfil();
+            opcao = Input.validarOpcao(1, 4);
+
+            switch(opcao) {
+                case 1:
+                    perfil.editarPerfil();
+                    break;
+                case 2:
+                    perfil.listarAmigos();
+                    break;
+                case 3:
+                    removerConta();
+                    break;
+                case 4:
+                default:
+                    voltar = true;
+            }
+        } while(!voltar);
+    }
+
+    private void enviarSolicitacaoDeAmizade() {
+
+        Perfil destinatario = buscarPerfil();
+
+        if(destinatario != null) {
+
+            if(this.contaConectada.getPerfil().querTeAdicionar(destinatario)) {
+                criarAmizade(this.contaConectada.getPerfil(), destinatario);
+                this.contaConectada.getPerfil().removerSolicitacao(destinatario);
+                Console.amigoAdicionado();
+            } else {
+                if(destinatario.receberSolicitacaoDeAmizade(this.contaConectada.getPerfil())) {
+                    Console.solicitacaoDeAmizadeEnviada();
+                } else {
+                    Erro.solicitacaoJaEnviada();
+                }
             }
         }
-        return false;
     }
 
-    private boolean confirmarSenha(String novaSenha) {
+    private void solicitacoesDeAmizade(Perfil perfil) {
 
-        Console.confirmeSenha();
-        return(novaSenha.equals(Input.lerStringTamanhoFixo(MAX_CARACTERES)));
+        if(perfil.getNumeroSolicitacoes() > 0) {
+            int lista = perfil.listarSolicitacoesDeAmizade();
+            int opcao;
+
+            Console.listar(++lista, "Voltar");
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                Console.menuSolicitacaoDeAmizade();
+
+                if(Input.validarOperacaoBinaria()) {
+                    Perfil novoAmigo = perfil.getRemetente(opcao-1);
+                    criarAmizade(perfil, novoAmigo);
+                    Console.amigoAdicionado();
+                }
+                perfil.removerSolicitacao(opcao-1);
+            }
+        }
+    }
+
+    private void criarAmizade(Perfil perfil1, Perfil perfil2) {
+
+        if(perfil1 != null && perfil2 != null) {
+            perfil1.adicionarAmigo(perfil2);
+            perfil2.adicionarAmigo(perfil1);
+        }
+    }
+
+    private void removerConta() {
+
+        Console.confirmarRemoverConta();
+        if(Input.validarOperacaoBinaria()) {
+            this.contaConectada.apagarConta();
+        }
+    }
+
+
+    //GERAL
+    private Perfil buscarPerfil() {
+
+        String nomeBuscar;
+        int lista = 0;
+        int opcao;
+        ArrayList<Perfil> listaOpcoes = new ArrayList<>();
+
+        Console.solicitarNomeBuscar();
+        nomeBuscar = Input.lerString();
+
+        for(Perfil atual: this.listaPerfis) {
+            if(atual.compararNome(nomeBuscar) && !atual.compararId(this.contaConectada.getId()) && !atual.eAmigo(this.contaConectada.getPerfil())) {
+                if(lista == 0) {
+                    Console.listaDePerfis();
+                }
+                lista++;
+                listaOpcoes.add(atual);
+                Console.listar(lista, atual.toString());
+            }
+        }
+
+        if(lista == 0) {
+            Erro.nenhumPerfilEncontrado();
+            return null;
+        }
+
+        Console.listar(++lista, "Voltar\n");
+
+        Console.selecioneOpcao();
+        opcao = Input.validarOpcao(1, lista);
+
+        if(opcao == lista) {
+            return null;
+        }
+
+        return listaOpcoes.remove(opcao-1);
     }
 }

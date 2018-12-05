@@ -7,10 +7,10 @@ public class Publicacao {
     private String titulo;
     private String texto;
 
-    public Publicacao(String autor, Data data, String titulo, String texto) {
+    public Publicacao(String autor, String titulo, String texto) {
 
         this.autor = autor;
-        this.data = data;
+        this.data = new Data();
         this.titulo = titulo;
         this.texto = texto;
     }

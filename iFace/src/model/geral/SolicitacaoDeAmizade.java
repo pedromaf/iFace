@@ -5,11 +5,19 @@ import model.Perfil;
 public class SolicitacaoDeAmizade {
 
     private Perfil remetente;
-    private Perfil destinatario;
 
-    public SolicitacaoDeAmizade(Perfil remetente, Perfil destinatario) {
+    public SolicitacaoDeAmizade(Perfil remetente) {
 
         this.remetente = remetente;
-        this.destinatario = destinatario;
+    }
+
+    public Perfil getRemetente() {
+
+        return this.remetente;
+    }
+
+    public String toString() {
+
+        return (this.remetente.getNome() + " quer ser seu amigo.");
     }
 }

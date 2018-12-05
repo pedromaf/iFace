@@ -19,6 +19,11 @@ public class Conta {
         this.senha = senha;
     }
 
+    public int getId() {
+
+        return this.id;
+    }
+
     public void associarPerfil(Perfil perfil) {
 
         if(this.perfil == null && perfil != null) {
@@ -47,5 +52,10 @@ public class Conta {
     public Perfil getPerfil() {
 
         return this.perfil;
+    }
+
+    public void apagarConta() {
+
+        //TODO
     }
 }

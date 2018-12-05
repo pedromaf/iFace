@@ -1,5 +1,8 @@
 package model.geral;
 
+import control.Input;
+import view.Console;
+
 public class DadosPessoais {
 
     private String nome;
@@ -18,28 +21,36 @@ public class DadosPessoais {
         return this.nome;
     }
 
-    public void setNome(String nome) {
+    public void alterarNome() {
 
-        this.nome = nome;
+        String novoNome;
+        Console.solicitarNome();
+        novoNome = Input.lerString();
+        this.nome = novoNome;
+        Console.nomeAlterado();
     }
 
-    public int getIdade() {
+    public void alterarIdade() {
 
-        return idade;
+        int novaIdade;
+        Console.solicitarIdade();
+        novaIdade = Input.lerInt();
+        this.idade = novaIdade;
+        Console.idadeAlterada();
     }
 
-    public void setIdade(int idade) {
+    public void alterarEmail() {
 
-        this.idade = idade;
+        String novoEmail;
+        Console.solicitarEmail();
+        novoEmail = Input.lerString();
+        this.nome = novoEmail;
+        Console.emailAlterado();
     }
 
-    public String getEmail() {
+    public String toString() {
 
-        return email;
-    }
-
-    public void setEmail(String email) {
-
-        this.email = email;
+        return (this.nome + ", " + this.idade + "\n[" +
+                this.email + "]\n");
     }
 }
