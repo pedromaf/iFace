@@ -1,10 +1,7 @@
 package model;
 
 import control.Input;
-import model.geral.AtributoPerfil;
-import model.geral.DadosPessoais;
-import model.geral.Conversa;
-import model.geral.SolicitacaoDeAmizade;
+import model.geral.*;
 import view.Console;
 import view.Erro;
 
@@ -19,6 +16,7 @@ public class Perfil {
     private ArrayList<SolicitacaoDeAmizade> listaSolicitacoesDeAmizade;
     private ArrayList<Comunidade> listaComunidadesAutorais;
     private ArrayList<Comunidade> listaComunidades;
+    private ArrayList<ConviteDeComunidade> listaConvitesDeComunidade;
     private ArrayList<Conversa> listaConversas;
     private ArrayList<AtributoPerfil> listaAtributos;
 
@@ -32,6 +30,7 @@ public class Perfil {
         this.listaComunidades = new ArrayList<>();
         this.listaConversas = new ArrayList<>();
         this.listaAtributos = new ArrayList<>();
+        this.listaConvitesDeComunidade = new ArrayList<>();
     }
 
 
@@ -135,29 +134,6 @@ public class Perfil {
     }
 
 
-    //SET
-    public void setIdConta(int idConta) {
-
-        if(this.idConta == 0) {
-            this.idConta = idConta;
-        } else {
-            Erro.erroAoAssociarPerfil();
-        }
-    }
-
-
-    //GET
-    public int getNumeroSolicitacoes() {
-
-        return this.listaSolicitacoesDeAmizade.size();
-    }
-
-    public String getNome() {
-
-        return dadosPessoais.getNome();
-    }
-
-
     //SOLICITACAO DE AMIZADE
     public boolean receberSolicitacaoDeAmizade(Perfil remetente) {
 
@@ -177,6 +153,7 @@ public class Perfil {
 
         int lista = 0;
         if(!this.listaSolicitacoesDeAmizade.isEmpty()) {
+            Console.mostrar("\n\t\t[Solicitacoes de Amizade]\n");
             for(SolicitacaoDeAmizade atual: this.listaSolicitacoesDeAmizade) {
                 Console.listar(++lista, atual.toString());
             }
@@ -207,7 +184,7 @@ public class Perfil {
     }
 
 
-    //ADICIONAR AMIGO
+    //AMIGOS
     public void adicionarAmigo(Perfil amigo) {
 
         if(amigo != null) {
@@ -232,8 +209,6 @@ public class Perfil {
         return false;
     }
 
-
-    //REMOVER AMIGO
     public Perfil removerAmigo() {
 
         if(!this.listaAmigos.isEmpty()) {
@@ -267,6 +242,45 @@ public class Perfil {
                 }
             }
         }
+    }
+
+    public void listarAmigos() {
+
+        if(!this.listaAmigos.isEmpty()) {
+            Console.mostrar("\n\t\t[Lista de Amigos]\n");
+            for(Perfil atual: this.listaAmigos) {
+                Console.mostrar(atual.toString());
+            }
+        } else {
+            Console.voceNaoTemAmigos();
+        }
+    }
+
+    public boolean temAmigos() {
+
+        return (!this.listaAmigos.isEmpty());
+    }
+
+    public Perfil buscarAmigo() {
+
+        if(!this.listaAmigos.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            for(Perfil atual: this.listaAmigos) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar");
+
+            Console.selecioneOpcao();
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                return this.listaAmigos.get(opcao-1);
+            }
+        }
+        return null;
     }
 
 
@@ -338,20 +352,143 @@ public class Perfil {
         return false;
     }
 
+    public boolean temConversas() {
 
-    //GERAL
-    public void listarAmigos() {
+        return (this.listaConversas.size() > 0);
+    }
 
-        if(!this.listaAmigos.isEmpty()) {
-            Console.mostrar("\n\t\t[Lista de Amigos]\n");
-            for(Perfil atual: this.listaAmigos) {
-                Console.mostrar(atual.toString());
-            }
-        } else {
-            Console.voceNaoTemAmigos();
+
+    //COMUNIDADE
+    public void adicionarComunidadeAutoral(Comunidade comunidade) {
+
+        if(comunidade != null) {
+            this.listaComunidadesAutorais.add(comunidade);
         }
     }
 
+    public boolean participaDeComunidade() {
+
+        return (!this.listaComunidades.isEmpty());
+    }
+
+    public void menuComunidadesQueParticipa() {
+
+        if(participaDeComunidade()) {
+            Console.mostrar("\n\t\t[Comunidades]\n");
+            Comunidade comunidade = listarComunidades();
+            if(comunidade != null) {
+                comunidade.entrar(this);
+            } else {
+                Erro.erroAoEntrarComunidade();
+            }
+        } else {
+            Console.voceNaoParticipaDeComunidades();
+        }
+    }
+
+    private Comunidade listarComunidades() {
+
+        if(!this.listaComunidades.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            for(Comunidade atual: this.listaComunidades) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar");
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                return this.listaComunidades.get(opcao-1);
+            }
+        }
+        return null;
+    }
+
+    public boolean receberConviteDeComunidade(ConviteDeComunidade conviteDeComunidade) {
+
+        if(conviteDeComunidade != null) {
+            for(ConviteDeComunidade atual: this.listaConvitesDeComunidade) {
+                if(atual.getComunidade().equals(conviteDeComunidade.getComunidade())) {
+                    return false;
+                }
+            }
+            this.listaConvitesDeComunidade.add(conviteDeComunidade);
+            return true;
+        }
+        return false;
+    }
+
+    public void menuSuasComunidades() {
+
+        if(!this.listaComunidadesAutorais.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            Console.mostrar("\t\n\n[Suas Comunidades]\n");
+            for(Comunidade atual: this.listaComunidadesAutorais) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar");
+            Console.selecioneOpcao();
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                this.listaComunidadesAutorais.get(opcao-1).entrar(this);
+            }
+        } else {
+            Console.voceNaoTemComunidadesAutorais();
+        }
+    }
+
+    public void removerComunidade(Comunidade comunidade) {
+
+        if(comunidade != null) {
+            for(Comunidade atual: this.listaComunidades){
+                if(comunidade.equals(atual)) {
+                    this.listaComunidades.remove(atual);
+                }
+            }
+        }
+    }
+
+    public void convitesDeComunidade() {
+
+        if(!this.listaConvitesDeComunidade.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            Console.mostrar("\n\t\t[Convites de Comunidade]\n");
+            for(ConviteDeComunidade atual: this.listaConvitesDeComunidade) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar");
+            Console.selecioneOpcao();
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                Console.menuConviteDeComunidade();
+
+                if(Input.validarOperacaoBinaria()) {
+                    //TODO
+                    Console.conviteAceito();
+                }
+                removerConvite(opcao-1);
+            }
+        } else {
+
+        }
+    }
+
+    private void removerConvite(int indice) {
+
+        this.listaConvitesDeComunidade.remove(indice);
+    }
+
+    //GERAL
     public void mostrarPerfil() {
 
         Console.mostrar(toString() + "\n");
@@ -382,13 +519,32 @@ public class Perfil {
         return false;
     }
 
-    public boolean temConversas() {
-
-        return (this.listaConversas.size() > 0);
-    }
-
     public String toString() {
 
         return this.dadosPessoais.toString();
+    }
+
+    public void setIdConta(int idConta) {
+
+        if(this.idConta == 0) {
+            this.idConta = idConta;
+        } else {
+            Erro.erroAoAssociarPerfil();
+        }
+    }
+
+    public int getNumeroSolicitacoes() {
+
+        return this.listaSolicitacoesDeAmizade.size();
+    }
+
+    public int getNumeroConvites() {
+
+        return this.listaConvitesDeComunidade.size();
+    }
+
+    public String getNome() {
+
+        return dadosPessoais.getNome();
     }
 }

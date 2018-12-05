@@ -46,4 +46,19 @@ public class Erro {
 
         System.out.println("Uma conversa com este amigo ja existe.");
     }
+
+    public static void erroAoEntrarComunidade() {
+
+        System.out.println("Ocorreu um erro ao tentar entrar na comunidade!");
+    }
+
+    public static void jaConvidouEsteAmigo() {
+
+        System.out.println("Erro! Voce ja enviou um convite para este amigo, aguarde ele responder.");
+    }
+
+    public static void voceJaEMembro() {
+
+        System.out.println("Erro! Voce ja e membro desta comunidade.");
+    }
 }

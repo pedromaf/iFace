@@ -162,6 +162,11 @@ public class Console {
         System.out.println("Amigo adicionado!\n");
     }
 
+    public static void voceNaoPossuiSolicitacoes() {
+
+        System.out.println("Voce nao possui solicitacoes de amizade.\n");
+    }
+
 
     //REMOVER AMIGO
     public static void amigoRemovido() {
@@ -210,6 +215,77 @@ public class Console {
     public static void mensagemEnviada() {
 
         System.out.println("Mensagem enviada!");
+    }
+
+
+    //COMUNIDADE
+    public static void solicitarNomeComunidade() {
+
+        System.out.println("Digite o nome da comunidade:\n");
+    }
+
+    public static void solicitarDescricaoComunidade() {
+
+        System.out.println("Digite uma descricao para a comunidade:\n");
+    }
+
+    public static void confirmarNomeComunidade(String nome) {
+
+        System.out.println("\nConfirmar '" + nome + "' como nome da comunidade?");
+        System.out.println("[1] Sim");
+        System.out.println("[2] Nao");
+
+        selecioneOpcao();
+    }
+
+    public static void comunidadeCriada() {
+
+        System.out.println("Comunidade criada!");
+    }
+
+    public static void voceNaoParticipaDeComunidades() {
+
+        System.out.println("Voce nao participa de comunidades.\n");
+    }
+
+    public static void conviteEnviado() {
+
+        System.out.println("Convite para participar da comunidade enviado!\n");
+    }
+
+    public static void voceNaoTemComunidadesAutorais() {
+
+        System.out.println("Voce nao possui comunidades autorais.\n");
+    }
+
+    public static void descricaoAlterada() {
+
+        System.out.println("Descricao alterada!\n");
+    }
+
+    public static void comunidadeNaoPossuiMembros() {
+
+        System.out.println("Nao ha membros nesta comunidade.\n");
+    }
+
+    public static void membroRemovido() {
+
+        System.out.println("Membro removido!\n");
+    }
+
+    public static void comunidadeSemPublicacoes() {
+
+        System.out.println("Esta comunidade ainda nao possui publicacoes.");
+    }
+
+    public static void solicitarTituloPublicacao() {
+
+        System.out.println("Digite o titulo da publicacao:\n");
+    }
+
+    public static void solicitarTextoPublicacao() {
+
+        System.out.println("Digite o texto da publicacao:\n");
     }
 
 
@@ -285,6 +361,56 @@ public class Console {
         System.out.println("Deseja enviar mensagem?");
         System.out.println("[1] Sim");
         System.out.println("[2] Nao");
+
+        selecioneOpcao();
+    }
+
+    public static void menuComunidade(int convites) {
+
+        System.out.println("\n\t\t[Comunidade]\n");
+        System.out.println("[1] Criar comunidade");
+        System.out.println("[2] Suas comunidades");
+        System.out.println("[3] Comunidades que participa");
+        System.out.println("[4] Convites(" + convites + ")");
+        System.out.println("[5] Voltar");
+
+        selecioneOpcao();
+    }
+
+    public static void menuPrincipalComunidadeCriador() {
+
+        System.out.println("\n[1] Alterar descricao");
+        System.out.println("[2] Convidar amigo");
+        System.out.println("[3] Listar membros");
+        System.out.println("[4] Remover membro");
+        System.out.println("[5] Publicacoes");
+        System.out.println("[6] Voltar");
+
+        selecioneOpcao();
+    }
+
+    public static void menuPrincipalComunidadeMembro() {
+
+        System.out.println("\n[1] Listar membros");
+        System.out.println("[2] Publicacoes");
+        System.out.println("[3] Voltar");
+
+        selecioneOpcao();
+    }
+
+    public static void menuPublicacoes() {
+
+        System.out.println("Deseja criar uma publicacao?");
+        System.out.println("[1] Sim");
+        System.out.println("[2] Nao");
+
+        selecioneOpcao();
+    }
+
+    public static void menuConviteDeComunidade() {
+
+        System.out.println("\n[1] Aceitar");
+        System.out.println("[2] Recusar");
 
         selecioneOpcao();
     }
