@@ -41,4 +41,9 @@ public class Erro {
 
         System.out.println("Erro! voce ja enviou uma solicitacao para esta pessoa, aguarde ela responder.");
     }
+
+    public static void conversaJaExiste() {
+
+        System.out.println("Uma conversa com este amigo ja existe.");
+    }
 }

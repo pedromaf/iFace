@@ -163,6 +163,13 @@ public class Console {
     }
 
 
+    //REMOVER AMIGO
+    public static void amigoRemovido() {
+
+        System.out.println("Amigo removido!");
+    }
+
+
     //REMOVER CONTA
     public static void confirmarRemoverConta() {
 
@@ -171,6 +178,38 @@ public class Console {
         System.out.println("[2] Nao");
 
         selecioneOpcao();
+    }
+
+    public static void contaRemovida() {
+
+        System.out.println("Sua conta foi removida do iFace! :(");
+    }
+
+
+    //MENSAGENS
+    public static void conversaCriada() {
+
+        System.out.println("Conversa criada!");
+    }
+
+    public static void voceNaoTemConversas() {
+
+        System.out.println("Voce nao possui conversas!\n");
+    }
+
+    public static void conversaVazia() {
+
+        System.out.println("Esta conversa ainda nao possui mensagens.\n");
+    }
+
+    public static void solicitarMensagem() {
+
+        System.out.println("Digite a mensagem que deseja enviar:");
+    }
+
+    public static void mensagemEnviada() {
+
+        System.out.println("Mensagem enviada!");
     }
 
 
@@ -185,12 +224,12 @@ public class Console {
         selecioneOpcao();
     }
 
-    public static void menuPrincipal(int solicitacoes, int mensagens) {
+    public static void menuPrincipal(int solicitacoes) {
 
         System.out.println("\n\t\t[Menu Principal]\n");
         System.out.println("[1] Perfil");
-        System.out.println("[2] Adicionar Amigo");
-        System.out.println("[3] Mensagens(" + mensagens + ")");
+        System.out.println("[2] Adicionar amigo");
+        System.out.println("[3] Mensagens");
         System.out.println("[4] Comunidades");
         System.out.println("[5] Solicitacoes de amizade(" + solicitacoes + ")");
         System.out.println("[6] Sair");
@@ -202,8 +241,9 @@ public class Console {
 
         System.out.println("\n[1] Editar perfil");
         System.out.println("[2] Lista de amigos");
-        System.out.println("[3] Remover conta");
-        System.out.println("[4] Voltar");
+        System.out.println("[3] Remover amigo");
+        System.out.println("[4] Remover conta");
+        System.out.println("[5] Voltar");
 
         selecioneOpcao();
     }
@@ -226,6 +266,25 @@ public class Console {
 
         System.out.println("\n[1] Aceitar");
         System.out.println("[2] Recusar");
+
+        selecioneOpcao();
+    }
+
+    public static void menuMensagens() {
+
+        System.out.println("\n\t\t[Mensagens]\n");
+        System.out.println("[1] Conversas");
+        System.out.println("[2] Criar nova conversa");
+        System.out.println("[3] Voltar");
+
+        selecioneOpcao();
+    }
+
+    public static void menuConversa() {
+
+        System.out.println("Deseja enviar mensagem?");
+        System.out.println("[1] Sim");
+        System.out.println("[2] Nao");
 
         selecioneOpcao();
     }

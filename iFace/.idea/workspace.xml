@@ -55,33 +55,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14192" />
+          <entry key="java" value="18978" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14192" />
+          <entry key="JAVA" value="18978" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="40" />
+          <entry key="java" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="40" />
+          <entry key="JAVA" value="47" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="231" lean-forward="true" selection-start-line="231" selection-end-line="231" />
+            <state relative-caret-position="585">
+              <caret line="249" column="25" lean-forward="true" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cadastrar#0;class#Iface#0" />
@@ -89,10 +89,14 @@
                 <element signature="method#confirmarSenha#0;class#Iface#0" />
                 <element signature="method#criarPerfil#0;class#Iface#0" />
                 <element signature="method#entrar#0;class#Iface#0" />
+                <element signature="method#menuPrincipal#0;class#Iface#0" />
                 <element signature="method#menuPerfil#0;class#Iface#0" />
+                <element signature="method#desfazerAmizade#0;class#Iface#0" />
                 <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
                 <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
                 <element signature="method#criarAmizade#0;class#Iface#0" />
+                <element signature="method#removerConta#0;class#Iface#0" />
+                <element signature="method#buscarPerfil#0;class#Iface#0" />
               </folding>
             </state>
           </provider>
@@ -101,15 +105,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Perfil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="381">
+              <caret line="296" selection-start-line="296" selection-end-line="296" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Perfil#0;class#Perfil#0" />
+                <element signature="method#editarPerfil#0;class#Perfil#0" />
                 <element signature="method#alterarAtributo#0;class#Perfil#0" />
                 <element signature="method#adicionarAtributo#0;class#Perfil#0" />
+                <element signature="method#removerAtributo#0;class#Perfil#0" />
                 <element signature="method#setIdConta#0;class#Perfil#0" />
-                <element signature="method#getNumeroMensagens#0;class#Perfil#0" />
                 <element signature="method#getNumeroSolicitacoes#0;class#Perfil#0" />
                 <element signature="method#getNome#0;class#Perfil#0" />
                 <element signature="method#receberSolicitacaoDeAmizade#0;class#Perfil#0" />
@@ -119,6 +124,10 @@
                 <element signature="method#getRemetente#0;class#Perfil#0" />
                 <element signature="method#adicionarAmigo#0;class#Perfil#0" />
                 <element signature="method#querTeAdicionar#0;class#Perfil#0" />
+                <element signature="method#removerDaListaDeAmigos#0;class#Perfil#0" />
+                <element signature="method#menuConversas#0;class#Perfil#0" />
+                <element signature="method#criarConversa#0;class#Perfil#0" />
+                <element signature="method#conversaJaExiste#0;class#Perfil#0" />
                 <element signature="method#listarAmigos#0;class#Perfil#0" />
                 <element signature="method#mostrarPerfil#0;class#Perfil#0" />
                 <element signature="method#compararNome#0;class#Perfil#0" />
@@ -130,11 +139,55 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/geral/Conversa.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#eMembro#0;class#Conversa#0" />
+                <element signature="method#apagar#0;class#Conversa#0" />
+                <element signature="method#toString#0;class#Conversa#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/geral/Mensagem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/Erro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+              <folding>
+                <element signature="method#loginInvalido#0;class#Erro#0" />
+                <element signature="method#usuarioJaExiste#0;class#Erro#0" />
+                <element signature="method#senhaNaoConfirmada#0;class#Erro#0" />
+                <element signature="method#erroAoAssociarPerfil#0;class#Erro#0" />
+                <element signature="method#stringTamanhoFixo#0;class#Erro#0" />
+                <element signature="method#opcaoInvalida#0;class#Erro#0" />
+                <element signature="method#nenhumPerfilEncontrado#0;class#Erro#0" />
+                <element signature="method#solicitacaoJaEnviada#0;class#Erro#0" />
+                <element signature="method#conversaJaExiste#0;class#Erro#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/Console.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="80" column="51" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+            <state relative-caret-position="384">
+              <caret line="201" column="71" selection-start-line="201" selection-start-column="71" selection-end-line="201" selection-end-column="71" />
               <folding>
                 <element signature="method#selecioneOpcao#0;class#Console#0" />
                 <element signature="method#mostrar#0;class#Console#0" />
@@ -149,6 +202,7 @@
                 <element signature="method#criarPerfil#0;class#Console#0" />
                 <element signature="method#perfilCriado#0;class#Console#0" />
                 <element signature="method#voceNaoTemAmigos#0;class#Console#0" />
+                <element signature="method#listaDePerfis#0;class#Console#0" />
                 <element signature="method#nomeAlterado#0;class#Console#0" />
                 <element signature="method#idadeAlterada#0;class#Console#0" />
                 <element signature="method#emailAlterado#0;class#Console#0" />
@@ -164,31 +218,20 @@
                 <element signature="method#solicitarNomeBuscar#0;class#Console#0" />
                 <element signature="method#solicitacaoDeAmizadeEnviada#0;class#Console#0" />
                 <element signature="method#amigoAdicionado#0;class#Console#0" />
+                <element signature="method#amigoRemovido#0;class#Console#0" />
                 <element signature="method#confirmarRemoverConta#0;class#Console#0" />
+                <element signature="method#contaRemovida#0;class#Console#0" />
+                <element signature="method#conversaCriada#0;class#Console#0" />
+                <element signature="method#voceNaoTemConversas#0;class#Console#0" />
+                <element signature="method#solicitarMensagem#0;class#Console#0" />
+                <element signature="method#mensagemEnviada#0;class#Console#0" />
                 <element signature="method#menuLogin#0;class#Console#0" />
                 <element signature="method#menuPrincipal#0;class#Console#0" />
                 <element signature="method#menuPerfil#0;class#Console#0" />
                 <element signature="method#menuEditarPerfil#0;class#Console#0" />
                 <element signature="method#menuSolicitacaoDeAmizade#0;class#Console#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/Erro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-              <folding>
-                <element signature="method#loginInvalido#0;class#Erro#0" />
-                <element signature="method#usuarioJaExiste#0;class#Erro#0" />
-                <element signature="method#senhaNaoConfirmada#0;class#Erro#0" />
-                <element signature="method#erroAoAssociarPerfil#0;class#Erro#0" />
-                <element signature="method#stringTamanhoFixo#0;class#Erro#0" />
-                <element signature="method#opcaoInvalida#0;class#Erro#0" />
-                <element signature="method#nenhumPerfilEncontrado#0;class#Erro#0" />
-                <element signature="method#solicitacaoJaEnviada#0;class#Erro#0" />
+                <element signature="method#menuMensagens#0;class#Console#0" />
+                <element signature="method#menuConversa#0;class#Console#0" />
               </folding>
             </state>
           </provider>
@@ -214,18 +257,19 @@
         <option value="$PROJECT_DIR$/src/control/Main.java" />
         <option value="$PROJECT_DIR$/src/model/SolicitacaoDeAmizade.java" />
         <option value="$PROJECT_DIR$/src/model/Mensagem.java" />
-        <option value="$PROJECT_DIR$/src/model/geral/Mensagem.java" />
         <option value="$PROJECT_DIR$/src/model/geral/Data.java" />
         <option value="$PROJECT_DIR$/src/model/Comunidade.java" />
         <option value="$PROJECT_DIR$/src/model/geral/DadosPessoais.java" />
         <option value="$PROJECT_DIR$/src/model/geral/AtributoPerfil.java" />
         <option value="$PROJECT_DIR$/src/model/geral/SolicitacaoDeAmizade.java" />
-        <option value="$PROJECT_DIR$/src/view/Erro.java" />
-        <option value="$PROJECT_DIR$/src/model/Conta.java" />
         <option value="$PROJECT_DIR$/src/model/geral/Publicacao.java" />
+        <option value="$PROJECT_DIR$/src/model/Conta.java" />
+        <option value="$PROJECT_DIR$/src/view/Erro.java" />
+        <option value="$PROJECT_DIR$/src/control/Iface.java" />
         <option value="$PROJECT_DIR$/src/model/Perfil.java" />
         <option value="$PROJECT_DIR$/src/view/Console.java" />
-        <option value="$PROJECT_DIR$/src/control/Iface.java" />
+        <option value="$PROJECT_DIR$/src/model/geral/Mensagem.java" />
+        <option value="$PROJECT_DIR$/src/model/geral/Conversa.java" />
       </list>
     </option>
   </component>
@@ -286,7 +330,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543975805607" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543983129040" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -335,7 +379,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -344,7 +388,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,23 +421,6 @@
             <element signature="method#lerString#0;class#Input#0" />
             <element signature="method#lerDouble#0;class#Input#0" />
             <element signature="method#lerInt#0;class#Input#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/geral/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/geral/Mensagem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,10 +475,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/geral/Publicacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Conta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="561">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
           <folding>
             <element signature="method#getId#0;class#Conta#0" />
             <element signature="method#associarPerfil#0;class#Conta#0" />
@@ -463,17 +497,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/geral/Publicacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Erro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding>
             <element signature="method#loginInvalido#0;class#Erro#0" />
             <element signature="method#usuarioJaExiste#0;class#Erro#0" />
@@ -483,21 +510,46 @@
             <element signature="method#opcaoInvalida#0;class#Erro#0" />
             <element signature="method#nenhumPerfilEncontrado#0;class#Erro#0" />
             <element signature="method#solicitacaoJaEnviada#0;class#Erro#0" />
+            <element signature="method#conversaJaExiste#0;class#Erro#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="249" column="25" lean-forward="true" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cadastrar#0;class#Iface#0" />
+            <element signature="method#usuarioExiste#0;class#Iface#0" />
+            <element signature="method#confirmarSenha#0;class#Iface#0" />
+            <element signature="method#criarPerfil#0;class#Iface#0" />
+            <element signature="method#entrar#0;class#Iface#0" />
+            <element signature="method#menuPrincipal#0;class#Iface#0" />
+            <element signature="method#menuPerfil#0;class#Iface#0" />
+            <element signature="method#desfazerAmizade#0;class#Iface#0" />
+            <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
+            <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
+            <element signature="method#criarAmizade#0;class#Iface#0" />
+            <element signature="method#removerConta#0;class#Iface#0" />
+            <element signature="method#buscarPerfil#0;class#Iface#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Perfil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="381">
+          <caret line="296" selection-start-line="296" selection-end-line="296" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Perfil#0;class#Perfil#0" />
+            <element signature="method#editarPerfil#0;class#Perfil#0" />
             <element signature="method#alterarAtributo#0;class#Perfil#0" />
             <element signature="method#adicionarAtributo#0;class#Perfil#0" />
+            <element signature="method#removerAtributo#0;class#Perfil#0" />
             <element signature="method#setIdConta#0;class#Perfil#0" />
-            <element signature="method#getNumeroMensagens#0;class#Perfil#0" />
             <element signature="method#getNumeroSolicitacoes#0;class#Perfil#0" />
             <element signature="method#getNome#0;class#Perfil#0" />
             <element signature="method#receberSolicitacaoDeAmizade#0;class#Perfil#0" />
@@ -507,6 +559,10 @@
             <element signature="method#getRemetente#0;class#Perfil#0" />
             <element signature="method#adicionarAmigo#0;class#Perfil#0" />
             <element signature="method#querTeAdicionar#0;class#Perfil#0" />
+            <element signature="method#removerDaListaDeAmigos#0;class#Perfil#0" />
+            <element signature="method#menuConversas#0;class#Perfil#0" />
+            <element signature="method#criarConversa#0;class#Perfil#0" />
+            <element signature="method#conversaJaExiste#0;class#Perfil#0" />
             <element signature="method#listarAmigos#0;class#Perfil#0" />
             <element signature="method#mostrarPerfil#0;class#Perfil#0" />
             <element signature="method#compararNome#0;class#Perfil#0" />
@@ -519,8 +575,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="80" column="51" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
+        <state relative-caret-position="384">
+          <caret line="201" column="71" selection-start-line="201" selection-start-column="71" selection-end-line="201" selection-end-column="71" />
           <folding>
             <element signature="method#selecioneOpcao#0;class#Console#0" />
             <element signature="method#mostrar#0;class#Console#0" />
@@ -535,6 +591,7 @@
             <element signature="method#criarPerfil#0;class#Console#0" />
             <element signature="method#perfilCriado#0;class#Console#0" />
             <element signature="method#voceNaoTemAmigos#0;class#Console#0" />
+            <element signature="method#listaDePerfis#0;class#Console#0" />
             <element signature="method#nomeAlterado#0;class#Console#0" />
             <element signature="method#idadeAlterada#0;class#Console#0" />
             <element signature="method#emailAlterado#0;class#Console#0" />
@@ -550,31 +607,47 @@
             <element signature="method#solicitarNomeBuscar#0;class#Console#0" />
             <element signature="method#solicitacaoDeAmizadeEnviada#0;class#Console#0" />
             <element signature="method#amigoAdicionado#0;class#Console#0" />
+            <element signature="method#amigoRemovido#0;class#Console#0" />
             <element signature="method#confirmarRemoverConta#0;class#Console#0" />
+            <element signature="method#contaRemovida#0;class#Console#0" />
+            <element signature="method#conversaCriada#0;class#Console#0" />
+            <element signature="method#voceNaoTemConversas#0;class#Console#0" />
+            <element signature="method#solicitarMensagem#0;class#Console#0" />
+            <element signature="method#mensagemEnviada#0;class#Console#0" />
             <element signature="method#menuLogin#0;class#Console#0" />
             <element signature="method#menuPrincipal#0;class#Console#0" />
             <element signature="method#menuPerfil#0;class#Console#0" />
             <element signature="method#menuEditarPerfil#0;class#Console#0" />
             <element signature="method#menuSolicitacaoDeAmizade#0;class#Console#0" />
+            <element signature="method#menuMensagens#0;class#Console#0" />
+            <element signature="method#menuConversa#0;class#Console#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
+    <entry file="file://$PROJECT_DIR$/src/model/geral/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="231" lean-forward="true" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="332">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/geral/Mensagem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/geral/Conversa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#cadastrar#0;class#Iface#0" />
-            <element signature="method#usuarioExiste#0;class#Iface#0" />
-            <element signature="method#confirmarSenha#0;class#Iface#0" />
-            <element signature="method#criarPerfil#0;class#Iface#0" />
-            <element signature="method#entrar#0;class#Iface#0" />
-            <element signature="method#menuPerfil#0;class#Iface#0" />
-            <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
-            <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
-            <element signature="method#criarAmizade#0;class#Iface#0" />
+            <element signature="method#eMembro#0;class#Conversa#0" />
+            <element signature="method#apagar#0;class#Conversa#0" />
+            <element signature="method#toString#0;class#Conversa#0" />
           </folding>
         </state>
       </provider>

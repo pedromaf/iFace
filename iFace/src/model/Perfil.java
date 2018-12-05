@@ -3,7 +3,7 @@ package model;
 import control.Input;
 import model.geral.AtributoPerfil;
 import model.geral.DadosPessoais;
-import model.geral.Mensagem;
+import model.geral.Conversa;
 import model.geral.SolicitacaoDeAmizade;
 import view.Console;
 import view.Erro;
@@ -19,7 +19,7 @@ public class Perfil {
     private ArrayList<SolicitacaoDeAmizade> listaSolicitacoesDeAmizade;
     private ArrayList<Comunidade> listaComunidadesAutorais;
     private ArrayList<Comunidade> listaComunidades;
-    private ArrayList<Mensagem> listaMensagens;
+    private ArrayList<Conversa> listaConversas;
     private ArrayList<AtributoPerfil> listaAtributos;
 
 
@@ -30,7 +30,7 @@ public class Perfil {
         this.listaSolicitacoesDeAmizade = new ArrayList<>();
         this.listaComunidadesAutorais = new ArrayList<>();
         this.listaComunidades = new ArrayList<>();
-        this.listaMensagens = new ArrayList<>();
+        this.listaConversas = new ArrayList<>();
         this.listaAtributos = new ArrayList<>();
     }
 
@@ -78,7 +78,7 @@ public class Perfil {
             int opcao;
             ArrayList<AtributoPerfil> listaAlterar = new ArrayList<>();
 
-            for(AtributoPerfil atual: listaAtributos) {
+            for(AtributoPerfil atual: this.listaAtributos) {
                 Console.listar(++lista, atual.toString());
                 listaAlterar.add(atual);
             }
@@ -117,7 +117,7 @@ public class Perfil {
             int lista = 0;
             int opcao;
 
-            for(AtributoPerfil atual: listaAtributos) {
+            for(AtributoPerfil atual: this.listaAtributos) {
                 Console.listar(++lista, atual.toString());
             }
 
@@ -147,11 +147,6 @@ public class Perfil {
 
 
     //GET
-    public int getNumeroMensagens() {
-
-        return this.listaMensagens.size();
-    }
-
     public int getNumeroSolicitacoes() {
 
         return this.listaSolicitacoesDeAmizade.size();
@@ -238,6 +233,112 @@ public class Perfil {
     }
 
 
+    //REMOVER AMIGO
+    public Perfil removerAmigo() {
+
+        if(!this.listaAmigos.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            for(Perfil atual: this.listaAmigos) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar\n");
+            Console.selecioneOpcao();
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                return this.listaAmigos.remove(opcao-1);
+            }
+        } else {
+            Console.voceNaoTemAmigos();
+        }
+        return null;
+    }
+
+    public void removerDaListaDeAmigos(Perfil perfil) {
+
+        if(perfil != null) {
+            for(Perfil atual: this.listaAmigos) {
+                if(perfil.equals(atual)) {
+                    this.listaAmigos.remove(atual);
+                    break;
+                }
+            }
+        }
+    }
+
+
+    //MENSAGENS
+    public void menuConversas() {
+
+        if(temConversas()) {
+            int lista = 0;
+            int opcao;
+
+            Console.mostrar("\n\t\t[Conversas]\n");
+            for(Conversa atual: this.listaConversas) {
+                Console.listar(++lista, atual.toString(this));
+            }
+            Console.listar(++lista, "Voltar");
+            Console.selecioneOpcao();
+
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                Conversa conversaAtual = this.listaConversas.get(opcao-1);
+                conversaAtual.entrar(this);
+            }
+        } else {
+            Console.voceNaoTemConversas();
+        }
+    }
+
+    public void criarConversa() {
+
+        if(!this.listaAmigos.isEmpty()) {
+            int lista = 0;
+            int opcao;
+
+            Console.mostrar("\n\t\t[Criar Conversa]\n");
+            for(Perfil atual: this.listaAmigos) {
+                Console.listar(++lista, atual.toString());
+            }
+
+            Console.listar(++lista, "Voltar\n");
+            Console.selecioneOpcao();
+            opcao = Input.validarOpcao(1, lista);
+
+            if(opcao != lista) {
+                Perfil amigo = this.listaAmigos.get(opcao-1);
+                if(!conversaJaExiste(amigo)) {
+                    Conversa novaConversa = new Conversa(this, amigo);
+                    this.listaConversas.add(novaConversa);
+                    amigo.listaConversas.add(novaConversa);
+                    Console.conversaCriada();
+                } else {
+                    Erro.conversaJaExiste();
+                }
+            }
+        } else {
+            Console.voceNaoTemAmigos();
+        }
+    }
+
+    private boolean conversaJaExiste(Perfil amigo) {
+
+        if(!this.listaConversas.isEmpty()) {
+            for(Conversa atual: this.listaConversas) {
+                if(atual.eMembro(amigo)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
     //GERAL
     public void listarAmigos() {
 
@@ -279,6 +380,11 @@ public class Perfil {
             }
         }
         return false;
+    }
+
+    public boolean temConversas() {
+
+        return (this.listaConversas.size() > 0);
     }
 
     public String toString() {

@@ -54,7 +54,7 @@ public class Conta {
         return this.perfil;
     }
 
-    public void apagarConta() {
+    public void apagar() {
 
         //TODO
     }
