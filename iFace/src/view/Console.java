@@ -288,6 +288,21 @@ public class Console {
         System.out.println("Digite o texto da publicacao:\n");
     }
 
+    public static void conviteAceito() {
+
+        System.out.println("Voce foi adicionado a comunidade!");
+    }
+
+    public static void voceNaoPossuiConvites() {
+
+        System.out.println("Voce nao possui convites.\n");
+    }
+
+    public static void publicacaoCriada() {
+
+        System.out.println("Publicacao criada!\n");
+    }
+
 
     //MENUS
     public static void menuLogin() {

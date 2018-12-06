@@ -388,7 +388,8 @@ public class Iface {
 
         Console.confirmarRemoverConta();
         if(Input.validarOperacaoBinaria()) {
-            this.contaConectada.apagar();
+            this.listaPerfis.remove(this.contaConectada.apagar());
+            this.listaContas.remove(this.contaConectada);
             this.contaConectada = null;
             return true;
         }

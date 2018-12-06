@@ -32,6 +32,7 @@ public class Publicacao {
 
     public String toString() {
 
-        return (this.autor + " [" + this.data.toString() + "]\n\t" + this.titulo + "\n " + this.texto + "\n");
+        return (this.autor.getNome() + " [" + this.data.toString() + "]\n\n\t" + this.titulo + "\n\n " + this.texto + "\n\n" +
+                "----------------------");
     }
 }

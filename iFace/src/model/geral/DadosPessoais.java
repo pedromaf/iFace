@@ -48,6 +48,13 @@ public class DadosPessoais {
         Console.emailAlterado();
     }
 
+    public void apagar() {
+
+        this.nome = null;
+        this.idade = 0;
+        this.email = null;
+    }
+
     public String toString() {
 
         return (this.nome + ", " + this.idade + "\n[" +

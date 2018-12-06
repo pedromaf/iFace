@@ -153,7 +153,7 @@ public class Perfil {
 
         int lista = 0;
         if(!this.listaSolicitacoesDeAmizade.isEmpty()) {
-            Console.mostrar("\n\t\t[Solicitacoes de Amizade]\n");
+            Console.mostrar("\n\t\t[Solicitacoes de Amizade]\n\n");
             for(SolicitacaoDeAmizade atual: this.listaSolicitacoesDeAmizade) {
                 Console.listar(++lista, atual.toString());
             }
@@ -247,7 +247,7 @@ public class Perfil {
     public void listarAmigos() {
 
         if(!this.listaAmigos.isEmpty()) {
-            Console.mostrar("\n\t\t[Lista de Amigos]\n");
+            Console.mostrar("\n\t\t[Lista de Amigos]\n\n");
             for(Perfil atual: this.listaAmigos) {
                 Console.mostrar(atual.toString());
             }
@@ -397,6 +397,7 @@ public class Perfil {
             }
 
             Console.listar(++lista, "Voltar");
+            Console.selecioneOpcao();
             opcao = Input.validarOpcao(1, lista);
 
             if(opcao != lista) {
@@ -426,7 +427,7 @@ public class Perfil {
             int lista = 0;
             int opcao;
 
-            Console.mostrar("\t\n\n[Suas Comunidades]\n");
+            Console.mostrar("\n\t\t[Suas Comunidades]\n\n");
             for(Comunidade atual: this.listaComunidadesAutorais) {
                 Console.listar(++lista, atual.toString());
             }
@@ -473,20 +474,46 @@ public class Perfil {
                 Console.menuConviteDeComunidade();
 
                 if(Input.validarOperacaoBinaria()) {
-                    //TODO
+                    Comunidade comunidade = this.listaConvitesDeComunidade.get(opcao-1).getComunidade();
+                    comunidade.adicionarMembro(this);
+                    adicionarComunidade(comunidade);
                     Console.conviteAceito();
                 }
-                removerConvite(opcao-1);
+                this.listaConvitesDeComunidade.remove(opcao-1);
             }
         } else {
-
+            Console.voceNaoPossuiConvites();
         }
     }
 
-    private void removerConvite(int indice) {
+    private void adicionarComunidade(Comunidade comunidade) {
 
-        this.listaConvitesDeComunidade.remove(indice);
+        if(comunidade != null) {
+            for(Comunidade atual: this.listaComunidades) {
+                if(atual.equals(comunidade)) {
+                    return;
+                }
+            }
+            this.listaComunidades.add(comunidade);
+        }
     }
+
+
+    //REMOVER CONTA
+    public void apagar() {
+        this.dadosPessoais.apagar();
+        this.dadosPessoais = null;
+
+        apagarAmizades();
+    }
+
+    private void apagarAmizades() {
+
+        if(!this.listaAmigos.isEmpty()) {
+            for(Perfil atual:)
+        }
+    }
+
 
     //GERAL
     public void mostrarPerfil() {

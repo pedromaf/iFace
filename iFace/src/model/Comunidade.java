@@ -32,7 +32,6 @@ public class Comunidade {
     public void entrar(Perfil perfil) {
 
         this.membroOnline = perfil;
-        Console.mostrar(toString());
         if(eCriador(perfil)) {
             menuPrincipalCriador();
         } else {
@@ -47,6 +46,7 @@ public class Comunidade {
         boolean voltar = false;
 
         do {
+            Console.mostrar(toString());
             Console.menuPrincipalComunidadeCriador();
             opcao = Input.validarOpcao(1, 6);
 
@@ -85,10 +85,11 @@ public class Comunidade {
             switch(opcao) {
                 case 1:
                     listarMembros();
+                    break;
                 case 2:
                     publicacoes();
                     break;
-                case 3:
+                case 4:
                 default:
                     voltar = true;
             }
@@ -156,7 +157,7 @@ public class Comunidade {
         }
     }
 
-    public void adicionarMmebro(Perfil novoMembro) {
+    public void adicionarMembro(Perfil novoMembro) {
 
         if(novoMembro != null) {
             if(!eMembro(novoMembro)) {
@@ -189,14 +190,14 @@ public class Comunidade {
             textoPublicacao = Input.lerString();
 
             this.listaPublicacoes.add(new Publicacao(this.membroOnline, tituloPublicacao, textoPublicacao));
-            Console.mensagemEnviada();
+            Console.publicacaoCriada();
         }
     }
 
     private void listarPublicacoes() {
 
         if(!this.listaPublicacoes.isEmpty()) {
-            Console.mostrar("\n\t\t[Publicacoes]\n");
+            Console.mostrar("\n\t\t[Publicacoes]\n\n");
             for(Publicacao atual: this.listaPublicacoes) {
                 Console.mostrar(atual.toString() + "\n");
             }
@@ -240,6 +241,6 @@ public class Comunidade {
 
     public String toString() {
 
-        return ("\n\t\t{" + this.nome + "}\n" + this.descricao + "\n");
+        return ("\t{" + this.nome + "}\n" + this.descricao + "\n");
     }
 }

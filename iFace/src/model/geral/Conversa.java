@@ -27,6 +27,7 @@ public class Conversa {
     public void entrar(Perfil atual) {
 
         if(!this.listaMensagens.isEmpty()) {
+            Console.mostrar("\n\t\t[Conversa com " + (atual.equals(this.amigo1)?this.amigo2.getNome():this.amigo1.getNome()) + "]\n\n");
             listarMensagens();
         } else {
             Console.conversaVazia();
