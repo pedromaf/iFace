@@ -400,7 +400,9 @@ public class Perfil {
             int opcao;
 
             for(Comunidade atual: this.listaComunidades) {
-                Console.listar(++lista, atual.toString());
+                if(atual.getCriador() != null) {
+                    Console.listar(++lista, atual.toString());
+                }
             }
 
             Console.listar(++lista, "Voltar");
@@ -538,7 +540,6 @@ public class Perfil {
 
         if(!this.listaAmigos.isEmpty()) {
             for(Perfil atual: this.listaAmigos) {
-                //TODO
                 atual.removerDaListaDeAmigos(this);
             }
         }

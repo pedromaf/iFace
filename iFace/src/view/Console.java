@@ -32,7 +32,7 @@ public class Console {
 
     public static void logado() {
 
-        System.out.println("Login efetuado! Bem vindo.");
+        System.out.println("Login efetuado! Bem vindo.\n");
     }
 
 
@@ -54,7 +54,7 @@ public class Console {
 
     public static void cadastroRealizado() {
 
-        System.out.println("Cadastro realizado com sucesso!");
+        System.out.println("Cadastro realizado com sucesso!\n");
     }
 
 
@@ -66,7 +66,7 @@ public class Console {
 
     public static void perfilCriado() {
 
-        System.out.println("Perfil criado!");
+        System.out.println("Perfil criado!\n");
     }
 
 
@@ -171,14 +171,14 @@ public class Console {
     //REMOVER AMIGO
     public static void amigoRemovido() {
 
-        System.out.println("Amigo removido!");
+        System.out.println("Amigo removido!\n");
     }
 
 
     //REMOVER CONTA
     public static void confirmarRemoverConta() {
 
-        System.out.println("Tem certeza que deseja remover sua conta? Todos os seus dados serao apagados do iFace.");
+        System.out.println("\nTem certeza que deseja remover sua conta? Todos os seus dados serao apagados do iFace.");
         System.out.println("[1] Sim");
         System.out.println("[2] Nao");
 
@@ -187,14 +187,14 @@ public class Console {
 
     public static void contaRemovida() {
 
-        System.out.println("Sua conta foi removida do iFace! :(");
+        System.out.println("Sua conta foi removida do iFace! :(\n");
     }
 
 
     //MENSAGENS
     public static void conversaCriada() {
 
-        System.out.println("Conversa criada!");
+        System.out.println("Conversa criada!\n");
     }
 
     public static void voceNaoTemConversas() {
@@ -214,7 +214,7 @@ public class Console {
 
     public static void mensagemEnviada() {
 
-        System.out.println("Mensagem enviada!");
+        System.out.println("Mensagem enviada!\n");
     }
 
 
@@ -240,7 +240,7 @@ public class Console {
 
     public static void comunidadeCriada() {
 
-        System.out.println("Comunidade criada!");
+        System.out.println("Comunidade criada!\n");
     }
 
     public static void voceNaoParticipaDeComunidades() {
@@ -275,7 +275,7 @@ public class Console {
 
     public static void comunidadeSemPublicacoes() {
 
-        System.out.println("Esta comunidade ainda nao possui publicacoes.");
+        System.out.println("Esta comunidade ainda nao possui publicacoes.\n");
     }
 
     public static void solicitarTituloPublicacao() {
@@ -290,7 +290,7 @@ public class Console {
 
     public static void conviteAceito() {
 
-        System.out.println("Voce foi adicionado a comunidade!");
+        System.out.println("Voce foi adicionado a comunidade!\n");
     }
 
     public static void voceNaoPossuiConvites() {
@@ -373,7 +373,7 @@ public class Console {
 
     public static void menuConversa() {
 
-        System.out.println("Deseja enviar mensagem?");
+        System.out.println("\nDeseja enviar mensagem?");
         System.out.println("[1] Sim");
         System.out.println("[2] Nao");
 
@@ -415,7 +415,7 @@ public class Console {
 
     public static void menuPublicacoes() {
 
-        System.out.println("Deseja criar uma publicacao?");
+        System.out.println("\nDeseja criar uma publicacao?");
         System.out.println("[1] Sim");
         System.out.println("[2] Nao");
 

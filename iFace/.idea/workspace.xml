@@ -56,42 +56,39 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="31846" />
+          <entry key="java" value="32359" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="31846" />
+          <entry key="JAVA" value="32359" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="82" />
+          <entry key="java" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="82" />
+          <entry key="JAVA" value="86" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="400" column="16" selection-start-line="400" selection-start-column="16" selection-end-line="400" selection-end-column="16" />
+            <state relative-caret-position="353">
+              <caret line="406" selection-start-line="406" selection-end-line="406" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#cadastrar#0;class#Iface#0" />
                 <element signature="method#usuarioExiste#0;class#Iface#0" />
                 <element signature="method#confirmarSenha#0;class#Iface#0" />
                 <element signature="method#criarPerfil#0;class#Iface#0" />
-                <element signature="method#entrar#0;class#Iface#0" />
-                <element signature="method#menuPrincipal#0;class#Iface#0" />
-                <element signature="method#menuPerfil#0;class#Iface#0" />
                 <element signature="method#desfazerAmizade#0;class#Iface#0" />
                 <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
                 <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
@@ -100,24 +97,6 @@
                 <element signature="method#menuComunidade#0;class#Iface#0" />
                 <element signature="method#criarComunidade#0;class#Iface#0" />
                 <element signature="method#buscarPerfil#0;class#Iface#0" />
-                <element signature="method#apagarComunidades#0;class#Iface#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Conta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-              <folding>
-                <element signature="method#getId#0;class#Conta#0" />
-                <element signature="method#associarPerfil#0;class#Conta#0" />
-                <element signature="method#validarUsuario#0;class#Conta#0" />
-                <element signature="method#validarSenha#0;class#Conta#0" />
-                <element signature="method#perfilCriado#0;class#Conta#0" />
-                <element signature="method#getPerfil#0;class#Conta#0" />
               </folding>
             </state>
           </provider>
@@ -126,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Perfil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="567" column="5" selection-start-line="567" selection-start-column="5" selection-end-line="567" selection-end-column="5" />
+            <state relative-caret-position="502">
+              <caret line="628" selection-start-line="628" selection-end-line="628" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1105#2045#0" />
@@ -152,30 +131,27 @@
                 <element signature="e#9778#9865#0" />
                 <element signature="e#10023#10212#0" />
                 <element signature="e#10218#10316#0" />
-                <element signature="e#10322#10761#0" />
-                <element signature="e#10767#11318#0" />
                 <element signature="e#11324#11814#0" />
-                <element signature="e#12512#12810#0" />
                 <element signature="e#12816#14307#0" />
-                <element signature="e#16215#16492#0" />
-                <element signature="e#16498#16607#0" />
-                <element signature="e#16613#16692#0" />
-                <element signature="e#16698#16903#0" />
-                <element signature="e#16909#16988#0" />
-                <element signature="e#16994#17174#0" />
-                <element signature="e#17180#17278#0" />
-                <element signature="e#17284#17377#0" />
-                <element signature="e#17383#17455#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/geral/Publicacao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Comunidade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+            <state relative-caret-position="-416">
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Comunidade#0;class#Comunidade#0" />
@@ -187,13 +163,23 @@
                 <element signature="method#listarMembros#0;class#Comunidade#0" />
                 <element signature="method#removerMembro#0;class#Comunidade#0" />
                 <element signature="method#adicionarMembro#0;class#Comunidade#0" />
-                <element signature="method#publicacoes#0;class#Comunidade#0" />
-                <element signature="method#listarPublicacoes#0;class#Comunidade#0" />
-                <element signature="method#removerPublicacoesPorMembro#0;class#Comunidade#0" />
                 <element signature="method#getNome#0;class#Comunidade#0" />
+                <element signature="method#getCriador#0;class#Comunidade#0" />
                 <element signature="method#eCriador#0;class#Comunidade#0" />
                 <element signature="method#eMembro#0;class#Comunidade#0" />
                 <element signature="method#toString#0;class#Comunidade#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/Console.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#43#158#0" />
               </folding>
             </state>
           </provider>
@@ -225,14 +211,14 @@
         <option value="$PROJECT_DIR$/src/model/geral/Mensagem.java" />
         <option value="$PROJECT_DIR$/src/model/geral/ConviteDeComunidade.java" />
         <option value="$PROJECT_DIR$/src/view/Erro.java" />
-        <option value="$PROJECT_DIR$/src/model/geral/Publicacao.java" />
-        <option value="$PROJECT_DIR$/src/view/Console.java" />
         <option value="$PROJECT_DIR$/src/model/Conta.java" />
         <option value="$PROJECT_DIR$/src/model/geral/DadosPessoais.java" />
         <option value="$PROJECT_DIR$/src/model/geral/Conversa.java" />
+        <option value="$PROJECT_DIR$/src/control/Iface.java" />
+        <option value="$PROJECT_DIR$/src/view/Console.java" />
         <option value="$PROJECT_DIR$/src/model/Comunidade.java" />
         <option value="$PROJECT_DIR$/src/model/Perfil.java" />
-        <option value="$PROJECT_DIR$/src/control/Iface.java" />
+        <option value="$PROJECT_DIR$/src/model/geral/Publicacao.java" />
       </list>
     </option>
   </component>
@@ -293,7 +279,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544058621026" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544062008507" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -338,11 +324,20 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -351,12 +346,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35900217" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23752712" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
@@ -435,81 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="300" column="42" selection-start-line="300" selection-start-column="42" selection-end-line="300" selection-end-column="42" />
-          <folding>
-            <element signature="e#43#158#0" />
-            <element signature="e#164#256#0" />
-            <element signature="e#262#391#0" />
-            <element signature="e#398#507#0" />
-            <element signature="e#513#606#0" />
-            <element signature="e#612#706#0" />
-            <element signature="e#713#849#0" />
-            <element signature="e#855#972#0" />
-            <element signature="e#978#1072#0" />
-            <element signature="e#1078#1188#0" />
-            <element signature="e#1195#1309#0" />
-            <element signature="e#1315#1403#0" />
-            <element signature="e#1410#1538#0" />
-            <element signature="e#1544#1642#0" />
-            <element signature="e#1649#1759#0" />
-            <element signature="e#1765#1857#0" />
-            <element signature="e#1863#1955#0" />
-            <element signature="e#1961#2075#0" />
-            <element signature="e#2081#2196#0" />
-            <element signature="e#2202#2323#0" />
-            <element signature="e#2329#2427#0" />
-            <element signature="e#2433#2535#0" />
-            <element signature="e#2541#2639#0" />
-            <element signature="e#2646#2758#0" />
-            <element signature="e#2764#2857#0" />
-            <element signature="e#2863#2956#0" />
-            <element signature="e#2963#3092#0" />
-            <element signature="e#3098#3220#0" />
-            <element signature="e#3226#3322#0" />
-            <element signature="e#3332#3425#0" />
-            <element signature="e#3329#3439#0" />
-            <element signature="e#3446#3740#0" />
-            <element signature="e#3746#3856#0" />
-            <element signature="e#3863#3971#0" />
-            <element signature="e#3977#4086#0" />
-            <element signature="e#4092#4210#0" />
-            <element signature="e#4216#4331#0" />
-            <element signature="e#4337#4431#0" />
-            <element signature="e#4438#4570#0" />
-            <element signature="e#4576#4707#0" />
-            <element signature="e#4713#4965#0" />
-            <element signature="e#4971#5067#0" />
-            <element signature="e#5073#5200#0" />
-            <element signature="e#5210#5292#0" />
-            <element signature="e#5340#5438#0" />
-            <element signature="e#5476#5558#0" />
-            <element signature="e#5582#5676#0" />
-            <element signature="e#5710#5792#0" />
-            <element signature="e#5810#5904#0" />
-            <element signature="e#5947#6040#0" />
-            <element signature="e#6084#6211#0" />
-            <element signature="e#6330#6411#0" />
-            <element signature="e#6444#6533#0" />
-            <element signature="e#6560#6634#0" />
-            <element signature="e#5208#5462#0" />
-            <element signature="e#5468#5916#0" />
-            <element signature="e#5922#6231#0" />
-            <element signature="e#6237#6711#0" />
-            <element signature="e#6717#6886#0" />
-            <element signature="e#6892#7155#0" />
-            <element signature="e#7161#7363#0" />
-            <element signature="e#7369#7773#0" />
-            <element signature="e#7779#8108#0" />
-            <element signature="e#8114#8341#0" />
-            <element signature="e#9135#9340#0" />
-            <element signature="e#9738#9906#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/geral/DadosPessoais.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -552,16 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/geral/Publicacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="123" selection-start-line="34" selection-start-column="123" selection-end-line="34" selection-end-column="123" />
-          <folding>
-            <element signature="method#apagar#0;class#Publicacao#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/geral/ConviteDeComunidade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -569,36 +479,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Comunidade.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Conta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="229" column="28" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="28" />
+        <state relative-caret-position="595">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding>
+            <element signature="method#getId#0;class#Conta#0" />
+            <element signature="method#associarPerfil#0;class#Conta#0" />
+            <element signature="method#validarUsuario#0;class#Conta#0" />
+            <element signature="method#validarSenha#0;class#Conta#0" />
+            <element signature="method#perfilCriado#0;class#Conta#0" />
+            <element signature="method#getPerfil#0;class#Conta#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#158#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="406" selection-start-line="406" selection-end-line="406" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Comunidade#0;class#Comunidade#0" />
-            <element signature="method#entrar#0;class#Comunidade#0" />
-            <element signature="method#menuPrincipalCriador#0;class#Comunidade#0" />
-            <element signature="method#menuPrincipalMembro#0;class#Comunidade#0" />
-            <element signature="method#alterarDescricao#0;class#Comunidade#0" />
-            <element signature="method#convidarAmigo#0;class#Comunidade#0" />
-            <element signature="method#listarMembros#0;class#Comunidade#0" />
-            <element signature="method#removerMembro#0;class#Comunidade#0" />
-            <element signature="method#adicionarMembro#0;class#Comunidade#0" />
-            <element signature="method#publicacoes#0;class#Comunidade#0" />
-            <element signature="method#listarPublicacoes#0;class#Comunidade#0" />
-            <element signature="method#removerPublicacoesPorMembro#0;class#Comunidade#0" />
-            <element signature="method#getNome#0;class#Comunidade#0" />
-            <element signature="method#eCriador#0;class#Comunidade#0" />
-            <element signature="method#eMembro#0;class#Comunidade#0" />
-            <element signature="method#toString#0;class#Comunidade#0" />
+            <element signature="method#cadastrar#0;class#Iface#0" />
+            <element signature="method#usuarioExiste#0;class#Iface#0" />
+            <element signature="method#confirmarSenha#0;class#Iface#0" />
+            <element signature="method#criarPerfil#0;class#Iface#0" />
+            <element signature="method#desfazerAmizade#0;class#Iface#0" />
+            <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
+            <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
+            <element signature="method#criarAmizade#0;class#Iface#0" />
+            <element signature="method#menuMensagens#0;class#Iface#0" />
+            <element signature="method#menuComunidade#0;class#Iface#0" />
+            <element signature="method#criarComunidade#0;class#Iface#0" />
+            <element signature="method#buscarPerfil#0;class#Iface#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Perfil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="567" column="5" selection-start-line="567" selection-start-column="5" selection-end-line="567" selection-end-column="5" />
+        <state relative-caret-position="502">
+          <caret line="628" selection-start-line="628" selection-end-line="628" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1105#2045#0" />
@@ -623,61 +554,39 @@
             <element signature="e#9778#9865#0" />
             <element signature="e#10023#10212#0" />
             <element signature="e#10218#10316#0" />
-            <element signature="e#10322#10761#0" />
-            <element signature="e#10767#11318#0" />
             <element signature="e#11324#11814#0" />
-            <element signature="e#12512#12810#0" />
             <element signature="e#12816#14307#0" />
-            <element signature="e#16215#16492#0" />
-            <element signature="e#16498#16607#0" />
-            <element signature="e#16613#16692#0" />
-            <element signature="e#16698#16903#0" />
-            <element signature="e#16909#16988#0" />
-            <element signature="e#16994#17174#0" />
-            <element signature="e#17180#17278#0" />
-            <element signature="e#17284#17377#0" />
-            <element signature="e#17383#17455#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Conta.java">
+    <entry file="file://$PROJECT_DIR$/src/model/geral/Publicacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding>
-            <element signature="method#getId#0;class#Conta#0" />
-            <element signature="method#associarPerfil#0;class#Conta#0" />
-            <element signature="method#validarUsuario#0;class#Conta#0" />
-            <element signature="method#validarSenha#0;class#Conta#0" />
-            <element signature="method#perfilCriado#0;class#Conta#0" />
-            <element signature="method#getPerfil#0;class#Conta#0" />
-          </folding>
+        <state relative-caret-position="468">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/Iface.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Comunidade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="400" column="16" selection-start-line="400" selection-start-column="16" selection-end-line="400" selection-end-column="16" />
+        <state relative-caret-position="-416">
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#cadastrar#0;class#Iface#0" />
-            <element signature="method#usuarioExiste#0;class#Iface#0" />
-            <element signature="method#confirmarSenha#0;class#Iface#0" />
-            <element signature="method#criarPerfil#0;class#Iface#0" />
-            <element signature="method#entrar#0;class#Iface#0" />
-            <element signature="method#menuPrincipal#0;class#Iface#0" />
-            <element signature="method#menuPerfil#0;class#Iface#0" />
-            <element signature="method#desfazerAmizade#0;class#Iface#0" />
-            <element signature="method#enviarSolicitacaoDeAmizade#0;class#Iface#0" />
-            <element signature="method#solicitacoesDeAmizade#0;class#Iface#0" />
-            <element signature="method#criarAmizade#0;class#Iface#0" />
-            <element signature="method#menuMensagens#0;class#Iface#0" />
-            <element signature="method#menuComunidade#0;class#Iface#0" />
-            <element signature="method#criarComunidade#0;class#Iface#0" />
-            <element signature="method#buscarPerfil#0;class#Iface#0" />
-            <element signature="method#apagarComunidades#0;class#Iface#0" />
+            <element signature="method#Comunidade#0;class#Comunidade#0" />
+            <element signature="method#entrar#0;class#Comunidade#0" />
+            <element signature="method#menuPrincipalCriador#0;class#Comunidade#0" />
+            <element signature="method#menuPrincipalMembro#0;class#Comunidade#0" />
+            <element signature="method#alterarDescricao#0;class#Comunidade#0" />
+            <element signature="method#convidarAmigo#0;class#Comunidade#0" />
+            <element signature="method#listarMembros#0;class#Comunidade#0" />
+            <element signature="method#removerMembro#0;class#Comunidade#0" />
+            <element signature="method#adicionarMembro#0;class#Comunidade#0" />
+            <element signature="method#getNome#0;class#Comunidade#0" />
+            <element signature="method#getCriador#0;class#Comunidade#0" />
+            <element signature="method#eCriador#0;class#Comunidade#0" />
+            <element signature="method#eMembro#0;class#Comunidade#0" />
+            <element signature="method#toString#0;class#Comunidade#0" />
           </folding>
         </state>
       </provider>

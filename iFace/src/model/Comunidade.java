@@ -199,7 +199,9 @@ public class Comunidade {
         if(!this.listaPublicacoes.isEmpty()) {
             Console.mostrar("\n\t\t[Publicacoes]\n\n");
             for(Publicacao atual: this.listaPublicacoes) {
-                Console.mostrar(atual.toString() + "\n");
+                if(!atual.getDeletada()) {
+                    Console.mostrar(atual.toString() + "\n");
+                }
             }
         }
     }
@@ -207,14 +209,20 @@ public class Comunidade {
     public void removerPublicacoesPorMembro(Perfil membro) {
 
         if(eMembro(membro)) {
+            ArrayList<Publicacao> removerPublicacoes = new ArrayList<>();
+
             for(Publicacao atual: this.listaPublicacoes) {
                 if(atual.eAutor(membro)) {
                     atual.apagar();
-                    this.listaPublicacoes.remove(atual);
-                    removerPublicacoesPorMembro(membro);
-                    break;
+                    removerPublicacoes.add(atual);
                 }
             }
+
+            for(Publicacao atual: removerPublicacoes) {
+                this.listaPublicacoes.remove(atual);
+            }
+
+            removerPublicacoes.clear();
         }
     }
 
