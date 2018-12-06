@@ -48,6 +48,9 @@ public class Conversa {
     public void apagar() {
 
         this.listaMensagens.clear();
+        this.listaMensagens = null;
+        this.amigo1.apagarConversa(this);
+        this.amigo2.apagarConversa(this);
         this.amigo1 = null;
         this.amigo2 = null;
     }

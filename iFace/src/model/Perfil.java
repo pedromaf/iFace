@@ -357,6 +357,13 @@ public class Perfil {
         return (this.listaConversas.size() > 0);
     }
 
+    public void apagarConversa(Conversa conversa) {
+
+        if(conversa != null) {
+            this.listaConversas.remove(conversa);
+        }
+    }
+
 
     //COMUNIDADE
     public void adicionarComunidadeAutoral(Comunidade comunidade) {
@@ -461,10 +468,22 @@ public class Perfil {
             int lista = 0;
             int opcao;
 
+            ArrayList<ConviteDeComunidade> convitesInvalidos = new ArrayList<>();
+
             Console.mostrar("\n\t\t[Convites de Comunidade]\n");
             for(ConviteDeComunidade atual: this.listaConvitesDeComunidade) {
-                Console.listar(++lista, atual.toString());
+                if(atual.getComunidade().getCriador() != null) {
+                    Console.listar(++lista, atual.toString());
+                } else {
+                    convitesInvalidos.add(atual);
+                }
             }
+
+            for(ConviteDeComunidade atual: convitesInvalidos) {
+                this.listaConvitesDeComunidade.remove(atual);
+            }
+
+            convitesInvalidos.clear();
 
             Console.listar(++lista, "Voltar");
             Console.selecioneOpcao();
@@ -503,14 +522,48 @@ public class Perfil {
     public void apagar() {
         this.dadosPessoais.apagar();
         this.dadosPessoais = null;
+        this.listaSolicitacoesDeAmizade.clear();
+        this.listaSolicitacoesDeAmizade = null;
+        this.listaConvitesDeComunidade.clear();
+        this.listaConvitesDeComunidade = null;
+        this.listaAtributos.clear();
+        this.listaAtributos = null;
 
         apagarAmizades();
+        apagarConversas();
+        sairComunidades();
     }
 
     private void apagarAmizades() {
 
         if(!this.listaAmigos.isEmpty()) {
-            for(Perfil atual:)
+            for(Perfil atual: this.listaAmigos) {
+                //TODO
+                atual.removerDaListaDeAmigos(this);
+            }
+        }
+        this.listaAmigos = null;
+    }
+
+    private void apagarConversas() {
+
+        if(!this.listaConversas.isEmpty()) {
+            for(Conversa atual: this.listaConversas) {
+                atual.apagar();
+            }
+            this.listaConversas.clear();
+            this.listaConversas = null;
+        }
+    }
+
+    private void sairComunidades() {
+
+        if(!this.listaComunidades.isEmpty()) {
+            for(Comunidade atual: this.listaComunidades) {
+                atual.sair(this);
+            }
+            this.listaComunidades.clear();
+            this.listaComunidades = null;
         }
     }
 

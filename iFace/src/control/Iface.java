@@ -388,11 +388,32 @@ public class Iface {
 
         Console.confirmarRemoverConta();
         if(Input.validarOperacaoBinaria()) {
-            this.listaPerfis.remove(this.contaConectada.apagar());
+            Perfil perfil = this.contaConectada.apagar();
+            apagarComunidades(perfil);
+            this.listaPerfis.remove(perfil);
             this.listaContas.remove(this.contaConectada);
             this.contaConectada = null;
             return true;
         }
         return false;
+    }
+
+    private void apagarComunidades(Perfil perfil) {
+
+        if(perfil != null) {
+            ArrayList<Comunidade> removerComunidades = new ArrayList<>();
+            for(Comunidade atual: this.listaComunidades) {
+                if(perfil.equals(atual.getCriador())) {
+                    atual.apagar();
+                    removerComunidades.add(atual);
+                }
+            }
+
+            for(Comunidade atual: removerComunidades) {
+                this.listaComunidades.remove(atual);
+            }
+
+            removerComunidades.clear();
+        }
     }
 }

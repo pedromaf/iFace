@@ -212,6 +212,7 @@ public class Comunidade {
                     atual.apagar();
                     this.listaPublicacoes.remove(atual);
                     removerPublicacoesPorMembro(membro);
+                    break;
                 }
             }
         }
@@ -222,6 +223,11 @@ public class Comunidade {
     public String getNome() {
 
         return this.nome;
+    }
+
+    public Perfil getCriador() {
+
+        return this.criador;
     }
 
     private boolean eCriador(Perfil perfil) {
@@ -242,5 +248,24 @@ public class Comunidade {
     public String toString() {
 
         return ("\t{" + this.nome + "}\n" + this.descricao + "\n");
+    }
+
+    public void apagar() {
+
+        this.criador = null;
+        this.nome = null;
+        this.descricao = null;
+        this.membroOnline = null;
+        this.listaMembros.clear();
+        this.listaMembros = null;
+        this.listaPublicacoes.clear();
+        this.listaPublicacoes = null;
+
+    }
+
+    public void sair(Perfil perfil) {
+
+        this.listaMembros.remove(perfil);
+        removerPublicacoesPorMembro(perfil);
     }
 }
